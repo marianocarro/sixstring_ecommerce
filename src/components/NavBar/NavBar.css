@@ -1,0 +1,36 @@
+#navbar {
+    background-color: #78909c;
+    display: flex;
+	border-bottom: 2px solid black;
+    justify-content: space-between;
+   
+}
+
+/*#navbar ul {
+    display: flex;
+    float: right;
+    padding: 25px;
+ }*/
+
+
+#navbar ul {
+    display: inline-block;
+      
+ }
+#navbar ul li {
+    display: inline-block;
+ }
+#navbar ul li a{
+         padding: 20px;
+         color: white;
+         text-decoration: none;
+ }
+#navbar ul li a:hover{
+    color: black;
+    background: whitesmoke;
+ }
+
+#cartwidget {
+    display: flex;
+
+}
