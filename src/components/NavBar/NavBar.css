@@ -6,21 +6,15 @@
    
 }
 
-/*#navbar ul {
-    display: flex;
-    float: right;
-    padding: 25px;
- }*/
-
-
 #navbar ul {
-    display: inline-block;
+    float: right;
       
  }
 #navbar ul li {
     display: inline-block;
  }
 #navbar ul li a{
+         margin: 0;
          padding: 20px;
          color: white;
          text-decoration: none;
@@ -32,5 +26,7 @@
 
 #cartwidget {
     display: flex;
-
+    position: center;
+ 
 }
+
