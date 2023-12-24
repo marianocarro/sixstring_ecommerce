@@ -2,22 +2,27 @@
 import './App.css'
 
 import NavBar from "./components/NavBar/NavBar";
-import Cartwidget from "./components/NavBar/CartWidget";
-import ItemListContainer from "./components/ItemListContainer";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import ItemCount from "./components/ItemCount/ItemCount";
 
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
 function App() {
   
-
+     //<div id="app">    </div> lo saque del return tenia adentro a navbar y todo lo otro
   return (
     <>
-    <div id="app">
+    <BrowserRouter>
       <NavBar />
-      <ItemListContainer saludo = {"Bienvenidos a la eCommerce de Música"} />
-      
+
+      <Routes>
+        <Route path='/' element = {<ItemListContainer saludo = {"Bienvenidos a la eCommerce de Música"} />}/>
+
+        <Route path='*' element={<Navigate to='/' />} />
+      </Routes>
       <ItemCount stock = {10} />
-    </div>
+
+    </BrowserRouter>
       
     </>
   )

@@ -1,7 +1,7 @@
 import { useState } from "react"
 import "./ItemCount.css"
 
-const ItemCount = ({stock, onAdd}) => {
+const ItemCount = ({stock}) => {     //({}) aca es lo que recibo
     const [contador, setContador] = useState(1)
 
     const sumar = () =>{
@@ -15,13 +15,15 @@ const ItemCount = ({stock, onAdd}) => {
         }
         
     }
+
   return (
     <div>
          <button onClick={sumar}>+</button>
          <p>{contador}</p>
          <button onClick={restar}>-</button>
-         <button>Terminar Compra</button>
+         <button  > Terminar compra </button>
     </div>
   )
 }
+
 export default ItemCount
