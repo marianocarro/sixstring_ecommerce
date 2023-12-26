@@ -5,23 +5,26 @@ const products = [
       description: "",
       stock: 10,
       price: 15000,
-      image: "/public/img/sg1cherry.jpg"
+      image: "/public/img/sg1cherry.jpg",
+      category: "cuerdas"
     },
     {
       id: "sg2metal1",
       name: "Gibson Static Ebony",
-      description: "",
+      description: "Guitarra eléctrica Gibson modelo Static color Ebony",
       stock: 2,
       price: 12000,
-      image: "/img//public/img/sg1cherry.jpg"
+      image: "/public/img/sg2metal1.jpg",
+      category: "cuerdas"
     },
     {
       id: "sg2metal2",
-      name: "Auriculares Float Run",
-      description: "Este es el mejor teclado del mundo",
+      name: "Gibson Static ",
+      description: "Guitarra eléctrica Gibson modelo Static color madera",
       stock: 6,
-      price: 17000,
-      image: "/public/img/sg1cherry.jpg"
+      price: 12000,
+      image: "/public/img/sg2metal2.jpg",
+      category: "cuerdas"
     },
     {
       id: "acustic",
@@ -29,7 +32,8 @@ const products = [
       description: "Guitarra acustica marca Gibson",
       stock: 9,
       price: 12000,
-      image: "/public/img/sg1cherry.jpg"
+      image: "/public/img/acustica1.png",
+      category: "cuerdas"
     },
     {
       id: "bata1",
@@ -37,48 +41,37 @@ const products = [
       description: "Batería completa marca MAPEX",
       stock: 9,
       price: 120000,
-      image: "/public/img/sg1cherry.jpg"
+      image: "/public/img/bateria1.jpg",
+      category: "percusion",
     },
 
     {
       id: "bsthunder",
       name: "Bajo Gibson Thunderbird",
-      description: "Bajo eléctrico modelo Thunderbird color verde",
+      description: "Bajo eléctrico modelo Thunderbird color verde de 4 cuerdas",
       stock: 15,
       price: 19000,
-      image: "/public/img/sg1cherry.jpg"
+      image: "/public/img/bassthunderbird.jpg",
+      category: "cuerdas"
+
     },
     {
-      id: "khg522",
-      name: "Camara ILCE 9M3",
-      description: "Esta es la mejor camara del mundo",
+      id: "cable1",
+      name: "Cables Gibson",
+      description: "Cables para instrumentos plug Gibson 3.05mts ",
       stock: 3,
       price: 22000,
-      image: "/public/img/sg1cherry.jpg"
+      image: "/public/img/cable.png",
+      category: "accesorios",
     },
-    {
-      id: "prw092",
-      name: "Camara ILCE 6000L",
-      description: "Esta es la mejor camara del mundo",
-      stock: 10,
-      price: 31000,
-      image: "/public/img/sg1cherry.jpg"
-    },
-    {
-      id: "ujm422",
-      name: "Camara ZV E10",
-      description: "Esta es la mejor camara del mundo",
-      stock: 5,
-      price: 24000,
-      image: "/public/img/sg1cherry.jpg"
-    },
+
   ];
 
 const getProducts = new Promise((resolve, reject) => {
     //acá simulamos un retraso de red
     setTimeout(() => {
       resolve(products);
-    }, 2000);
+    }, 500);
   });
   
   export default getProducts

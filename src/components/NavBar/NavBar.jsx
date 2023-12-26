@@ -15,7 +15,7 @@ const NavBar = () => {
                 <li><Link to="/categories/cuerdas">CUERDAS</Link></li>  
                 <li><Link to="/categories/percusion">PERCUSION</Link></li>
                 <li><Link to="/categories/efectos">EFECTOS</Link></li>
-                <li><Link to="/categories/cuerdas">ACCESORIOS</Link></li>
+                <li><Link to="/categories/accesorios">ACCESORIOS</Link></li>
           
     	    </ul>
 

@@ -3,7 +3,8 @@ import './App.css'
 
 import NavBar from "./components/NavBar/NavBar";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
-import ItemCount from "./components/ItemCount/ItemCount";
+
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
@@ -16,12 +17,13 @@ function App() {
       <NavBar />
 
       <Routes>
-        <Route path='/' element = {<ItemListContainer saludo = {"Bienvenidos a la eCommerce de Música"} />}/>
-
+        <Route path="/" element = {<ItemListContainer saludo = {"Bienvenidos a la eCommerce de Música"} />}/>
+        <Route path="/categories/:category" element = {<ItemListContainer saludo = {"Bienvenidos a la eCommerce de Música"} />}/>
+        <Route path="/detail/:id" element = {<ItemDetailContainer/>} />
         <Route path='*' element={<Navigate to='/' />} />
       </Routes>
-      <ItemCount stock = {10} />
-
+      
+      
     </BrowserRouter>
       
     </>
