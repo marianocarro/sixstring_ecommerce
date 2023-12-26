@@ -64,7 +64,15 @@ const products = [
       image: "/public/img/cable.png",
       category: "accesorios",
     },
-
+    {
+      id: "cuerdas1",
+      name: "Cuerdas Earnie Ball",
+      description: "Cuerdas Earnie Ball Skinny Top Heavy Bottom Calibre mixto 0.10/0.11 ",
+      stock: 25,
+      price: 22000,
+      image: "/public/img/cuerdasearnieballSKHB.png",
+      category: "accesorios",
+    },
   ];
 
 const getProducts = new Promise((resolve, reject) => {
