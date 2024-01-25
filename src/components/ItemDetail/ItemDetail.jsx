@@ -1,7 +1,11 @@
+import { useContext } from "react";
+import { CartContext } from "../../context/CartContext";
 
 import "./ItemDetail.css";
 
 const ItemDetail = ({ product }) => {
+  const {carrito} = useContext(CartContext)
+
   return (
     <div className="item-detail">
       <img className="imagen" src={product.image} alt={product.name} />

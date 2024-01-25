@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-import getProducts from "../Utilities/data"
+import getProducts from "../utilities/data"
 import ItemDetail from "../ItemDetail/ItemDetail"
 import ItemCount from "../ItemCount/ItemCount"
 

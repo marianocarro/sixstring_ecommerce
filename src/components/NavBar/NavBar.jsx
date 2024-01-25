@@ -11,7 +11,7 @@ const NavBar = () => {
         <img src="/public/img/ST_logo.png" alt="logoSixStrings" />
       </Link>
             <ul> 
-                
+                <li><Link to="/">HOME</Link></li>
                 <li><Link to="/categories/cuerdas">CUERDAS</Link></li>  
                 <li><Link to="/categories/percusion">PERCUSION</Link></li>
                 <li><Link to="/categories/efectos">EFECTOS</Link></li>

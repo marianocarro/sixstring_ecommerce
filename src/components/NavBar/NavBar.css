@@ -11,7 +11,7 @@
     width: 170px;
 }
 #navbar ul {
-    float: center;
+    align-items: center;
     display: flex;
  }
 #navbar ul li {

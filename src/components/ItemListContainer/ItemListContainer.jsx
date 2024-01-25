@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 
-import getProducts from "../Utilities/data";
+import getProducts from "../utilities/data";
 
 import ItemList from "../ItemList/ItemList";
 

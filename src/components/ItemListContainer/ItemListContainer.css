@@ -1,5 +1,7 @@
 .item-list-container {
   padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap; 
 }
 
 .item-list-container .saludo {
