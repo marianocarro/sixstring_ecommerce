@@ -3,12 +3,13 @@
     display: flex;
 	border-bottom: 2px solid black;
     justify-content: space-between;
-   
+   height: 66px;
 }
 
-#navbar .brand img {
-    height: 90;
-    width: 170px;
+
+#navbar img {
+    height: 60;
+    width: 239px;
 }
 #navbar ul {
     align-items: center;
@@ -18,10 +19,10 @@
     display: inline-block;
  }
 #navbar ul li a{
-    margin: 0 10px; 
+    margin: 0 0px; 
     padding: 15px;
-         color: white;
-         text-decoration: none;
+    color: white;
+    text-decoration: none;
         
 
  }

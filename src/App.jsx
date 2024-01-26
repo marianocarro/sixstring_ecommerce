@@ -8,6 +8,8 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { CartProvider } from './context/CartContext';
 
+import Carrito from "./components/Carrito/Carrito";
+
 
 
 function App() {
@@ -27,6 +29,7 @@ function App() {
             <Route path="/" element = {<ItemListContainer saludo = {"Bienvenidos a la eCommerce de Música"} />}/>
             <Route path="/categories/:category" element = {<ItemListContainer saludo = {"Bienvenidos a la eCommerce de Música"} />}/>
             <Route path="/detail/:id" element = {<ItemDetailContainer/>} />
+            <Route path="/carrito" element={<Carrito />} />
             <Route path='*' element={<Navigate to='/' />} />
           </Routes>
           

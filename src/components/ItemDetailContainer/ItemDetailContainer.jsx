@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 
 import getProducts from "../utilities/data"
 import ItemDetail from "../ItemDetail/ItemDetail"
-import ItemCount from "../ItemCount/ItemCount"
+
 
 import { useParams } from "react-router-dom"
 
@@ -25,9 +25,11 @@ const ItemDetailContainer = () => {
   return (
     <div>
       <ItemDetail product={product} />
-      <ItemCount stock = {10} onAdd={(contador) => console.log('Cantidad Agregada', contador)}/>
-
+      
     </div>
   )
 }
 export default ItemDetailContainer
+
+
+//<ItemCount stock = {10} onAdd={(contador) => console.log('Cantidad Agregada', contador)}/>
