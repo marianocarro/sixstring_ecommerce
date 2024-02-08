@@ -21,7 +21,7 @@ const Item = ({product}) => {
 
   return (
     <div 
-      onMouseOver={handleMouseOver} //en Reat los eventos siempre empiezan con on. Evento de zoom cuando paso el mouse por sobre el item
+      onMouseOver={handleMouseOver} //en React los eventos siempre empiezan con on. Evento de zoom cuando paso el mouse por sobre el item
       onMouseLeave={handleMouseLeave}
       className="item"> 
         <img className="image" src={product.image} alt={product.name} />

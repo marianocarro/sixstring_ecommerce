@@ -2,7 +2,7 @@ const products = [
     {
       id: "sg1",
       name: "Gibson SG",
-      description: "",
+      description: "Gibson solor cherry clasico modelo SG",
       stock: 10,
       price: 15000,
       image: "/public/img/sg1cherry.jpg",

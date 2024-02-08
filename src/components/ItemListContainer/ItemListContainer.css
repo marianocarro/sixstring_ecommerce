@@ -1,10 +1,12 @@
 .item-list-container {
   padding: 0 20px;
   display: flex;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
+
 }
 
 .item-list-container .saludo {
+  
   font-size: 25px;
 }
 
