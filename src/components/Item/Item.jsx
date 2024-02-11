@@ -21,17 +21,19 @@ const Item = ({product}) => {
 
   return (
     <div 
+      style={cardstyle}
       onMouseOver={handleMouseOver} //en React los eventos siempre empiezan con on. Evento de zoom cuando paso el mouse por sobre el item
       onMouseLeave={handleMouseLeave}
       className="item"> 
+
         <img className="image" src={product.image} alt={product.name} />
         <p className="title"> {product.name} </p>
         <p className="price">$ {product.price} </p>
         
         <Link to={`/detail/${product.id}`} className="link">Ver detalles</Link>
     </div>
-  )
-}
+  );
+};
 export default Item
 
 

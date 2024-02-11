@@ -1,35 +1,61 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
+//import getProducts from "../utilities/data"     saco esto cuando cambio a firebase
+import ItemDetail from "../ItemDetail/ItemDetail";
+import { useParams } from "react-router-dom";
+import {doc, getDoc} from "firebase/firestore";
+import db from "../../db/db";
 
-import getProducts from "../utilities/data"
-import ItemDetail from "../ItemDetail/ItemDetail"
-
-
-import { useParams } from "react-router-dom"
 
 const ItemDetailContainer = () => {
-  const [product, setProduct] = useState({})
-  const { id } = useParams()
+  const [product, setProduct] = useState({});
+  const [productoExiste, setProductoExiste] = useState(false);
+  const { id } = useParams();
 
   useEffect(()=>{
-    getProducts
-      .then((respuesta)=> {
-        const productFind = respuesta.find( (prod)=> prod.id === id)
-        setProduct(productFind)
-      })
-      .catch((err)=>{
-        console.log(err)
-      })
-
-  }, [])
+    const productRef = doc (db, "product", id );
+    getDoc (productRef).then((respuesta)=>{
+    const productDb = {id: respuesta.id, ...respuesta.data()};
+    
+    if (!respuesta.exists()) {
+      setProductoExiste(true);
+    }
+    setProduct(productDb);
+    }) 
+  }, [id]); //nos pide id como dependencia para que si cambia id debe cambiar toda la data
 
   return (
     <div>
-      <ItemDetail product={product} />
-      
+      {productoExiste ? (
+        <div>Producto no existe</div>
+      ) : (
+        <ItemDetail product={product} />
+      )}
     </div>
-  )
-}
-export default ItemDetailContainer
+  );
+};
+    
+
+export default ItemDetailContainer;
 
 
-//<ItemCount stock = {10} onAdd={(contador) => console.log('Cantidad Agregada', contador)}/>
+
+
+
+
+
+
+
+
+
+   /*  eso iria dentro del use efects si no uso firebase
+
+      getProducts
+       .then((respuesta)=> {
+          const productFind = respuesta.find( (prod)=> prod.id === id)
+          setProduct(productFind)
+            })
+         .catch((err)=>{
+         console.log(err)
+       }) asi filtraba por productos antes del firebase*/
+
+

@@ -37,9 +37,9 @@ const products = [
     },
     {
       id: "bata1",
-      name: "Bateria MAPEX ",
+      name: "Bateria MAPEX",
       description: "Batería completa marca MAPEX",
-      stock: 9,
+      stock: 4,
       price: 120000,
       image: "/public/img/bateria1.jpg",
       category: "percusion",

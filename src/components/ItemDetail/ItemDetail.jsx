@@ -1,6 +1,5 @@
 import { useContext, useState } from "react";
 import { CartContext } from "../../context/CartContext";
-
 import { Link } from "react-router-dom";
 import ItemCount from "../ItemCount/ItemCount";
 
@@ -13,7 +12,7 @@ const ItemDetail = ({ product }) => {
   const [toggle, setToggle] = useState(false);
   const { añadirProducto } = useContext(CartContext)
 
-  const agregarAlCarrito = (contador) => {
+  const onAdd = (contador) => {  //onAdd = agregarAlCarrito
     const productoNuevo = {...product, cantidad: contador }
     añadirProducto(productoNuevo)
     setToggle(true);
@@ -40,7 +39,7 @@ const ItemDetail = ({ product }) => {
         ) : (
           <ItemCount
             stock={product.stock}
-            agregarAlCarrito={agregarAlCarrito}
+            onAdd={onAdd}
           />
         )}
       </div>

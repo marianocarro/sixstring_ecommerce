@@ -47,6 +47,9 @@ const Carrito = () => {
         <p>Vaciar carrito</p>
         <FaTrashAlt size={25} />
       </div>
+      <Link className="botones-carrito-continuar" to="/checkout">
+        <p>Continuar con la compra</p>
+      </Link>
     </div>
   );
 };
