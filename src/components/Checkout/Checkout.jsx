@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { addDoc, collection } from "firebase/firestore";
 
-import { Form } from "./Form";
+import Form from "./Form"
 import { CartContext } from "../../context/CartContext";
 import db from "../../db/db";  
 
@@ -19,7 +19,7 @@ const Checkout = () => {
   const { carrito, totalPrecio, borrarCarrito } = useContext(CartContext);
 
   const guardarDatosInput = (event) => {
-    setDatosForm({ ...datosForm, [event.target.name]: event.target.value });
+    setDatosForm({ ...datosForm, [event.target.name]: event.target.value });   //[event.target.name] entre corchetes porq los valores estan en otra variable
   };
 
   const enviarOrder = (event) => {

@@ -12,7 +12,7 @@ const ItemDetailContainer = () => {
   const { id } = useParams();
 
   useEffect(()=>{
-    const productRef = doc (db, "product", id );
+    const productRef = doc (db, "products", id );
     getDoc (productRef).then((respuesta)=>{
     const productDb = {id: respuesta.id, ...respuesta.data()};
     
@@ -56,6 +56,19 @@ export default ItemDetailContainer;
             })
          .catch((err)=>{
          console.log(err)
-       }) asi filtraba por productos antes del firebase*/
+       }) asi filtraba por productos antes del firebase
+       
+
+
+  esto es para firebase
+        const productRef = doc (db, "product", id );
+    getDoc (productRef).then((respuesta)=>{
+    const productDb = {id: respuesta.id, ...respuesta.data()};
+    
+    if (!respuesta.exists()) {
+      setProductoExiste(true);
+    }
+    setProduct(productDb);
+    }) */
 
 
