@@ -51,7 +51,7 @@ const Checkout = () => {
     <div className="checkout">
       {idOrden ? (
         <div className="orden">
-          <h2>Orden Generada correctamente!!</h2>
+          <h2>Orden Generada correctamente. Muchas Gracias por su compra.</h2>
           <p>N° de orden: {idOrden} </p>
           <Link className="boton-orden" to="/">Ver mas productos</Link>
         </div>

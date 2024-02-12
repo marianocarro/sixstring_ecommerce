@@ -32,7 +32,7 @@ const Carrito = () => {
               alt={product.name}
             />
             <p className="texto nombre">{product.name}</p>
-            <p className="texto">cantidad: {product.stock}</p>
+            <p className="texto">cantidad: {product.cantidad}</p>
             <p className="texto">precio c/u: ${product.price}</p>
             <FaTrashAlt
               className="borrar"
@@ -43,7 +43,7 @@ const Carrito = () => {
         ))}
       </ul>
       <h3>Total a pagar: ${totalPrecio()}</h3>
-      <div className="borrar-todo" onClick={borrarCarrito}>
+      <div className="botones-carrito-borrar" onClick={borrarCarrito}>
         <p>Vaciar carrito</p>
         <FaTrashAlt size={25} />
       </div>

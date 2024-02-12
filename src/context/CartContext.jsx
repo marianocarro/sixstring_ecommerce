@@ -20,7 +20,7 @@ const CartProvider = ({children}) => {  //la prop children van a ser todos los c
         if (productoCarrito.id === product.id) {
           return {
             ...productoCarrito,
-            stock: productoCarrito.stock + product.stock,
+            cantidad: productoCarrito.cantidad + product.cantidad,
           };
         } else {
           return productoCarrito;
@@ -38,12 +38,12 @@ const CartProvider = ({children}) => {  //la prop children van a ser todos los c
   };
 
   const totalCantidad = () => {
-    return carrito.reduce((total, product) => total + product.stock, 0);
+    return carrito.reduce((total, product) => total + product.cantidad, 0);
   };
 
   const totalPrecio = () => {
     return carrito.reduce(
-      (total, product) => total + product.stock * product.price,
+      (total, product) => total + product.cantidad * product.price,
       0
     );
   };
